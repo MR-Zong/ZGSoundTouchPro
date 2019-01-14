@@ -117,7 +117,7 @@ RunParameters::RunParameters(char *outFilePath)
 //    outFileName = (char *)malloc((len2+1)*sizeof(char));
 //    outFileNameStr.copy(outFileName,len2,0);
 
-    tempoDelta = 50.0;
+//    tempoDelta = 50.0;
     pitchDelta = 0.0;
     rateDelta = 1.0;
     quick = 0;

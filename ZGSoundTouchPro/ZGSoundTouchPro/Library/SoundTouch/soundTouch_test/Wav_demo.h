@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include "SoundTouch.h"
+//#include "ViewController.h"
 
 using namespace soundtouch;
 
@@ -20,7 +21,7 @@ public:
     Wav_demo();
     ~Wav_demo();
     
-    int demo_main(char *outFilePath);
+    int demo_main(char *outFilePath,int pitchVale);
     
 };
 

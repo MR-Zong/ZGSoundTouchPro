@@ -35,6 +35,7 @@
 		4174DE1B21E350B4007C89E6 /* soundtouch_config.h in Resources */ = {isa = PBXBuildFile; fileRef = 4174DE1A21E350B4007C89E6 /* soundtouch_config.h */; };
 		4174DE1F21E35476007C89E6 /* Wav_demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4174DE1D21E35476007C89E6 /* Wav_demo.cpp */; };
 		4174DE2121E35D73007C89E6 /* testZong.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4174DE2021E35D73007C89E6 /* testZong.wav */; };
+		417F1F3521EC3F5100471B03 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 417F1F3421EC3F5100471B03 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		4174DE1D21E35476007C89E6 /* Wav_demo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Wav_demo.cpp; sourceTree = "<group>"; };
 		4174DE1E21E35476007C89E6 /* Wav_demo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Wav_demo.h; sourceTree = "<group>"; };
 		4174DE2021E35D73007C89E6 /* testZong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = testZong.wav; sourceTree = "<group>"; };
+		417F1F3421EC3F5100471B03 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				417F1F3521EC3F5100471B03 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +145,7 @@
 				4174DDBB21DF59D5007C89E6 /* ZGSoundTouchProTests */,
 				4174DDC621DF59D5007C89E6 /* ZGSoundTouchProUITests */,
 				4174DDA121DF59D3007C89E6 /* Products */,
+				417F1F3321EC3F5100471B03 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -248,6 +252,14 @@
 				4174DE1E21E35476007C89E6 /* Wav_demo.h */,
 			);
 			path = soundTouch_test;
+			sourceTree = "<group>";
+		};
+		417F1F3321EC3F5100471B03 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				417F1F3421EC3F5100471B03 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

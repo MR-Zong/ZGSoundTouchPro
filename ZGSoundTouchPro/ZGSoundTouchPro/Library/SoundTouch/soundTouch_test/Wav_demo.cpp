@@ -33,6 +33,7 @@ using namespace std;
 #define SET_STREAM_TO_BIN_MODE(f) {}
 #endif
 
+static int zg_pitchValue =  6;
 
 static const char _helloText[] =
 "\n"
@@ -98,11 +99,12 @@ static void setup(SoundTouch *pSoundTouch, const WavInFile *inFile, const RunPar
     pSoundTouch->setSampleRate(sampleRate);
     pSoundTouch->setChannels(channels);
     
-    printf("tempoDelta %f",params->tempoDelta);
-    printf("pitchDelta %f",params->pitchDelta);
     pSoundTouch->setTempoChange(params->tempoDelta);
-    pSoundTouch->setPitchSemiTones(params->pitchDelta);
+//    pSoundTouch->setPitchSemiTones(params->pitchDelta);
+    pSoundTouch->setPitchSemiTones(zg_pitchValue);
     pSoundTouch->setRateChange(params->rateDelta);
+    printf("tempoDelta %f",params->tempoDelta);
+    printf("pitchDelta %d",zg_pitchValue);
     
     pSoundTouch->setSetting(SETTING_USE_QUICKSEEK, params->quick);
     pSoundTouch->setSetting(SETTING_USE_AA_FILTER, !(params->noAntiAlias));
@@ -132,6 +134,7 @@ static void setup(SoundTouch *pSoundTouch, const WavInFile *inFile, const RunPar
         fprintf(stderr, "  tempo change = %+g %%\n", params->tempoDelta);
         fprintf(stderr, "  pitch change = %+g semitones\n", params->pitchDelta);
         fprintf(stderr, "  rate change  = %+g %%\n\n", params->rateDelta);
+        
         fprintf(stderr, "Working...");
     }
     else
@@ -263,9 +266,11 @@ Wav_demo::~Wav_demo()
     ;
 }
 
-int Wav_demo::demo_main(char *outFilePath)
+int Wav_demo::demo_main(char *outFilePath,int pitchValue)
 {
 
+    zg_pitchValue = pitchValue;
+    
     WavInFile *inFile;
     WavOutFile *outFile;
     RunParameters *params;
