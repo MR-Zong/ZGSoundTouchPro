@@ -129,7 +129,7 @@
 
     if ([[NSFileManager defaultManager] fileExistsAtPath:outFilePath]) {
         [[NSFileManager defaultManager] removeItemAtPath:outFilePath error:nil];
-        sleep(1.0);
+        sleep(1.5);
     }
     
     int pitchVauld = [self.textField.text intValue];
